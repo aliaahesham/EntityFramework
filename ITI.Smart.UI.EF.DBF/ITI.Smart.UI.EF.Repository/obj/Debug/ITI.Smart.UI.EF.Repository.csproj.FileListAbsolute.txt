@@ -1,0 +1,10 @@
+D:\Entity Framework\ITI.Smart.UI.EF.DBF\ITI.Smart.UI.EF.Repository\bin\Debug\ITI.Smart.UI.EF.Repository.dll.config
+D:\Entity Framework\ITI.Smart.UI.EF.DBF\ITI.Smart.UI.EF.Repository\bin\Debug\ITI.Smart.UI.EF.Repository.dll
+D:\Entity Framework\ITI.Smart.UI.EF.DBF\ITI.Smart.UI.EF.Repository\bin\Debug\ITI.Smart.UI.EF.Repository.pdb
+D:\Entity Framework\ITI.Smart.UI.EF.DBF\ITI.Smart.UI.EF.Repository\bin\Debug\EntityFramework.dll
+D:\Entity Framework\ITI.Smart.UI.EF.DBF\ITI.Smart.UI.EF.Repository\bin\Debug\EntityFramework.SqlServer.dll
+D:\Entity Framework\ITI.Smart.UI.EF.DBF\ITI.Smart.UI.EF.Repository\bin\Debug\EntityFramework.xml
+D:\Entity Framework\ITI.Smart.UI.EF.DBF\ITI.Smart.UI.EF.Repository\bin\Debug\EntityFramework.SqlServer.xml
+D:\Entity Framework\ITI.Smart.UI.EF.DBF\ITI.Smart.UI.EF.Repository\obj\Debug\ITI.Smart.UI.EF.Repository.csprojResolveAssemblyReference.cache
+D:\Entity Framework\ITI.Smart.UI.EF.DBF\ITI.Smart.UI.EF.Repository\obj\Debug\ITI.Smart.UI.EF.Repository.dll
+D:\Entity Framework\ITI.Smart.UI.EF.DBF\ITI.Smart.UI.EF.Repository\obj\Debug\ITI.Smart.UI.EF.Repository.pdb

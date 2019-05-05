@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EF.UI.SmartModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Fk_CountryId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Country" Relationship="Self.FK_City_Country" FromRole="City" ToRole="Country" />
+    <NavigationProperty Name="UserVisits" Relationship="EF.UI.SmartModel.FK_UserVisits_City1" FromRole="City" ToRole="UserVisit" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Cities" Relationship="Self.FK_City_Country" FromRole="Country" ToRole="City" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Gender" Type="EF.UI.SmartModel.Gender" />
+    <NavigationProperty Name="UserVisits" Relationship="EF.UI.SmartModel.FK_UserVisits_User1" FromRole="User" ToRole="UserVisit" />
+  </EntityType>
+  <Association Name="FK_City_Country">
+    <End Role="Country" Type="Self.Country" Multiplicity="1" />
+    <End Role="City" Type="Self.City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="City">
+        <PropertyRef Name="Fk_CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cities" EntityType="Self.City" />
+    <EntitySet Name="Countries" EntityType="Self.Country" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK_City_Country" Association="Self.FK_City_Country">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="City" EntitySet="Cities" />
+    </AssociationSet>
+    <EntitySet Name="UserVisits" EntityType="EF.UI.SmartModel.UserVisit" />
+    <AssociationSet Name="FK_UserVisits_City1" Association="EF.UI.SmartModel.FK_UserVisits_City1">
+      <End Role="City" EntitySet="Cities" />
+      <End Role="UserVisit" EntitySet="UserVisits" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserVisits_User1" Association="EF.UI.SmartModel.FK_UserVisits_User1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserVisit" EntitySet="UserVisits" />
+    </AssociationSet>
+    <FunctionImport Name="sp_GetCountries" ReturnType="Collection(EF.UI.SmartModel.sp_GetCountries_Result)" />
+  </EntityContainer>
+  <ComplexType Name="Contacts">
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PhoneNumber" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <EnumType Name="Gender">
+    <Member Name="Male" />
+    <Member Name="Female" />
+  </EnumType>
+  <EntityType Name="UserVisit">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="CityId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="CityId" Type="Int32" Nullable="false" />
+    <Property Name="when" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="City" Relationship="EF.UI.SmartModel.FK_UserVisits_City1" FromRole="UserVisit" ToRole="City" />
+    <NavigationProperty Name="User" Relationship="EF.UI.SmartModel.FK_UserVisits_User1" FromRole="UserVisit" ToRole="User" />
+  </EntityType>
+  <Association Name="FK_UserVisits_City1">
+    <End Type="EF.UI.SmartModel.City" Role="City" Multiplicity="1" />
+    <End Type="EF.UI.SmartModel.UserVisit" Role="UserVisit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserVisit">
+        <PropertyRef Name="CityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserVisits_User1">
+    <End Type="EF.UI.SmartModel.User" Role="User" Multiplicity="1" />
+    <End Type="EF.UI.SmartModel.UserVisit" Role="UserVisit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserVisit">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="sp_GetCountries_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" />
+  </ComplexType>
+</Schema>

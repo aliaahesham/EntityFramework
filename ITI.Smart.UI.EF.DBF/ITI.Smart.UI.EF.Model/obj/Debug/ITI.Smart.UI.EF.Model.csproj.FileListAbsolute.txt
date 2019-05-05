@@ -1,0 +1,13 @@
+D:\Entity Framework\ITI.Smart.UI.EF.DBF\ITI.Smart.UI.EF.Model\obj\Debug\ITI.Smart.UI.EF.Model.csprojResolveAssemblyReference.cache
+D:\Entity Framework\ITI.Smart.UI.EF.DBF\ITI.Smart.UI.EF.Model\bin\Debug\ITI.Smart.UI.EF.Model.dll.config
+D:\Entity Framework\ITI.Smart.UI.EF.DBF\ITI.Smart.UI.EF.Model\bin\Debug\ITI.Smart.UI.EF.Model.dll
+D:\Entity Framework\ITI.Smart.UI.EF.DBF\ITI.Smart.UI.EF.Model\bin\Debug\ITI.Smart.UI.EF.Model.pdb
+D:\Entity Framework\ITI.Smart.UI.EF.DBF\ITI.Smart.UI.EF.Model\bin\Debug\EntityFramework.dll
+D:\Entity Framework\ITI.Smart.UI.EF.DBF\ITI.Smart.UI.EF.Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\Entity Framework\ITI.Smart.UI.EF.DBF\ITI.Smart.UI.EF.Model\bin\Debug\HibernatingRhinos.Profiler.Appender.dll
+D:\Entity Framework\ITI.Smart.UI.EF.DBF\ITI.Smart.UI.EF.Model\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Entity Framework\ITI.Smart.UI.EF.DBF\ITI.Smart.UI.EF.Model\bin\Debug\WebActivatorEx.dll
+D:\Entity Framework\ITI.Smart.UI.EF.DBF\ITI.Smart.UI.EF.Model\bin\Debug\EntityFramework.xml
+D:\Entity Framework\ITI.Smart.UI.EF.DBF\ITI.Smart.UI.EF.Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\Entity Framework\ITI.Smart.UI.EF.DBF\ITI.Smart.UI.EF.Model\obj\Debug\ITI.Smart.UI.EF.Model.dll
+D:\Entity Framework\ITI.Smart.UI.EF.DBF\ITI.Smart.UI.EF.Model\obj\Debug\ITI.Smart.UI.EF.Model.pdb

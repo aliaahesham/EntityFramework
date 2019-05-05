@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EFUISmartModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="Cities">
+      <EntityTypeMapping TypeName="EF.UI.SmartModel.City">
+        <MappingFragment StoreEntitySet="City">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Fk_CountryId" ColumnName="Fk_CountryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="EF.UI.SmartModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="EF.UI.SmartModel.Country">
+        <ModificationFunctionMapping>
+          <DeleteFunction FunctionName="EF.UI.SmartModel.Store.sp_RemoveCountry">
+            <ScalarProperty Name="Id" ParameterName="id" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="EF.UI.SmartModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserVisits">
+      <EntityTypeMapping TypeName="EF.UI.SmartModel.UserVisit">
+        <MappingFragment StoreEntitySet="UserVisits">
+          <ScalarProperty Name="when" ColumnName="when" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetCountries" FunctionName="EF.UI.SmartModel.Store.sp_GetCountries">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EF.UI.SmartModel.sp_GetCountries_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

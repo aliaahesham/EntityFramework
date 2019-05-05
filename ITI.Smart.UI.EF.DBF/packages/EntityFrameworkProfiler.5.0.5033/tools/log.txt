@@ -1,0 +1,8 @@
+2019-05-04 22:51:34,527 [1] DEBUG HibernatingRhinos.Profiler.Client.App [(null)] - Profiler initialized. Build: 5033
+2019-05-04 22:51:44,672 [1] WARN  Rhino.Licensing.AbstractLicenseValidator [(null)] - Could not find license file: C:\Users\Aliaa\AppData\Local\EntityFramework Profiler\license.xml
+2019-05-04 23:14:42,231 [1] DEBUG HibernatingRhinos.Profiler.Client.App [(null)] - Profiler initialized. Build: 5033
+2019-05-04 23:14:44,626 [1] WARN  Rhino.Licensing.AbstractLicenseValidator [(null)] - Could not find license file: C:\Users\Aliaa\AppData\Local\EntityFramework Profiler\license.xml
+2019-05-04 23:22:53,754 [1] DEBUG HibernatingRhinos.Profiler.Client.App [(null)] - Profiler initialized. Build: 5033
+2019-05-04 23:22:55,969 [1] WARN  Rhino.Licensing.AbstractLicenseValidator [(null)] - Could not find license file: C:\Users\Aliaa\AppData\Local\EntityFramework Profiler\license.xml
+2019-05-04 23:42:12,027 [1] DEBUG HibernatingRhinos.Profiler.Client.App [(null)] - Profiler initialized. Build: 5033
+2019-05-04 23:42:14,361 [1] WARN  Rhino.Licensing.AbstractLicenseValidator [(null)] - Could not find license file: C:\Users\Aliaa\AppData\Local\EntityFramework Profiler\license.xml
